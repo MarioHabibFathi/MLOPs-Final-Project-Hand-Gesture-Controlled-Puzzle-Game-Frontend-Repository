@@ -45,13 +45,13 @@ const response = await fetch('https://endearing-emotion-production-ffc2.up.railw
 
 The following image shows the gestures used to control the game:
 
-![Gesture Examples](README_images\Gestures.png)
+![Gesture Examples](README_images/Gestures.png)
 
 **Gesture → Direction mapping:**
-- `thumbs_up` → **up**
-- `thumbs_down` → **down**
-- `three_left` → **left**
-- `three_right` → **right**
+- `like` → **up**
+- `dislike` → **down**
+- `three` → **left**
+- `three2` → **right**
 
 ## 🎮 Controls
 
