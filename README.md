@@ -25,20 +25,33 @@ This project implements a gesture-controlled game using machine learning for ges
 - `mp.js` - Media processing utilities
 
 ## 🔧 Important Implementation Note
+    
 
-In `api-call.js`, there is a TODO section that needs to be implemented:
+To call the server we use the following commande in api-call.js to call the model API
 
-```javascript
-// TODO: Call your model's api here
-// and return the predicted label
-// Possible labels: "up", "down", "left", "right", null
-// null means stop & wait for the next gesture
-```
+<pre>
+const response = await fetch('https://endearing-emotion-production-ffc2.up.railway.app/predict-landmark', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(payload)
+});
+</pre>
 
-You need to replace the current random label generation with your actual ML model API call. The function should:
-- Take the processed tensor (`processed_t`) as input
-- Call your deployed ML model's API
-- Return one of these labels: "up", "down", "left", "right", or null
+
+
+## 🖼️ Gesture Reference
+
+The following image shows the gestures used to control the game:
+
+![Gesture Examples](README_images\Gestures.png)
+
+**Gesture → Direction mapping:**
+- `thumbs_up` → **up**
+- `thumbs_down` → **down**
+- `three_left` → **left**
+- `three_right` → **right**
 
 ## 🎮 Controls
 
